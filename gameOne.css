@@ -1,0 +1,113 @@
+*{
+    font-family: 'Quicksand', sans-serif;
+    /* background-color: #cf7500; */
+
+}
+body{
+    background-color: #1a1c20;
+}
+.container h1, h2, p{
+    color:white;
+    text-align: center;
+}
+#space{
+    margin-right: 50px;
+}
+.wrapper{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f0a500;
+    border-radius: 10px;
+    
+}
+.gallery-area{
+    display: flex;
+    flex-direction: column;
+    
+}
+.gallery-area p{
+    font-size: 1.2rem;
+}
+.gallery-area img{
+    border-top-left-radius: 10px ;
+    border-top-right-radius: 10px ;
+    border: 2px solid white;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);  
+    width: 300px;
+    height: 200px;
+}
+.input{
+    border: none;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);  
+
+}
+.your-score{
+    background-color: #cf7500;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+#total-score{
+    margin-left: 30px;
+}
+
+.container span{
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+    color:white;
+    opacity: 0;
+    transform: translate(-155px,0) scale(0.4);
+    animation: animate .5s forwards;
+}
+.container span:nth-of-type(2){
+    animation-delay: 0.05s;
+}
+.container span:nth-of-type(3){
+    animation-delay: 0.1s;
+}
+.container span:nth-of-type(4){
+    animation-delay: 0.15s;
+}
+.container span:nth-of-type(5){
+    animation-delay: 0.2s;
+}
+.container span:nth-of-type(6){
+    animation-delay: 0.25s;
+}
+.container span:nth-of-type(7){
+    animation-delay: 0.3s;
+}
+.container span:nth-of-type(8){
+    animation-delay: 0.35s;
+}
+.container span:nth-of-type(9){
+    animation-delay: 0.4s;
+}
+@keyframes animate{
+    40%{
+        transform: translate(50px,0)scale(.7);
+        opacity: 1;
+        color: #fff;
+    }
+    60%{
+        color:wheat;
+    }
+    80%{
+        transform: translate(0)scale(2);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0)scale(1);
+        opacity: 1;
+    }
+}

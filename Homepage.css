@@ -1,0 +1,227 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+
+nav{
+    display:flex;
+    justify-content: space-around;
+    min-height: 8vh;
+    align-items: center;
+    background-color: black;
+    font-family: 'Quicksand', sans-serif;
+    border-bottom: 2px solid #82b74b;
+
+}
+
+.logo{
+    color: deepskyblue;
+    letter-spacing: 5px;
+    font-size: 32px;
+}
+
+
+.nav-links{
+    
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    width: 40%;
+    
+}
+
+.nav-links a{
+    display: inline-block;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition:transform 0.4s;
+}
+ a:hover{
+    transform:scale(1.3);
+}
+
+
+.burger {
+   display: none; 
+}
+.burger div{
+    height: 5px;
+    width: 25px;
+    background-color: white;
+    margin: 5px;
+}
+
+.footer{
+    display: block;
+    width: 100%;
+    
+}
+
+
+.footer li{
+    width: 30%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+   
+    
+
+}
+
+@media screen and (max-width:768px) {
+    body{
+        overflow-x: hidden;
+    }
+    
+    .nav-links{
+        position: absolute;
+        right:0px;
+        font-size: 20px;
+        width: 40%;
+        height: 92vh;
+        top: 8vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: black;
+        background: rgba(0,0,0,0.8);
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        z-index: 1;
+    }
+   
+
+    .burger{
+        display: block;
+        cursor: pointer;
+    }
+
+    /*index.html files from Martin*/
+    #welcome-img{
+        width: 460px;
+        height: auto;
+    }
+    p{
+        text-align: center;
+    }
+    .navBar{
+        border-bottom: 2px dotted grey;
+    }
+    .city-img-right, .city-img-left{
+        display: none;
+    }
+    .about-container{
+        min-width:80%;
+    }
+   /*end of index.html files from Martin*/
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/*index.html files from Martin*/
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+body{
+    font-family: 'Quicksand', sans-serif;
+    background-image: url(https://images.unsplash.com/photo-1499678329028-101435549a4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
+}
+h1{
+    font-size: 2.5rem;
+}
+h3{
+   
+    text-align: center;
+}
+.city-img-container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.city-img-left img,
+.city-img-right img{
+    width: 60px;
+    height: auto;
+    padding: 0 30px;
+    filter: grayscale(100%);
+}
+
+.welcome-container h1, h2, h3, p{
+    color:#fff;
+    padding: 20px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.welcome-img-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#welcome-img{
+    border-radius: 10px;
+    border: 3px solid #fff;
+}
+.language-container{
+    display:block;
+    text-align: center;
+}
+.language-container img{
+    margin: 0 20px;
+}
+.flag-language-nl,.flag-language-uk{
+    transition:transform 0.4s;
+}
+.flag-language-uk:hover, .flag-language-nl:hover{
+    transform:scale(1.5);
+}
+#compass{
+    animation: rotate 4s linear infinite;
+}
+.about-container{
+    display: block;
+    margin:20px auto;
+    text-align: center;
+    /* width: 30%; */
+
+    background:rgba(0, 0, 0, 0.4); 
+    /* margin:30px;
+    /* width:60%; */ 
+    width:40%;
+    border-radius: 20px;
+}
+.about-container p{
+    font-size: 1.4rem;
+}
+
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg)
+    }
+    40%{
+        transform: rotate(90deg)
+    }
+    60%{
+        transform: rotate(60deg)
+    }
+    100%{
+        transform: rotate(360deg)
+    }
+}
